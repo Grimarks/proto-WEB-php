@@ -4,7 +4,6 @@ require_once "../includes/config.php";
 
 global $pdo;
 
-// Pastikan pengguna sudah login
 if (!isset($_SESSION['username'])) {
     header("Location: login.php");
     exit;
@@ -13,12 +12,10 @@ if (!isset($_SESSION['username'])) {
 $username = $_SESSION['username'];
 $role = $_SESSION['role'];
 
-// Ambil data pengguna
 $stmt = $pdo->prepare("SELECT id, username, email, role, profile_picture FROM users");
 $stmt->execute();
 $usersData = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-// Proses penghapusan pengguna
 if (isset($_GET['delete']) && $role === 'admin') {
     $userId = $_GET['delete'];
     $stmt = $pdo->prepare("DELETE FROM users WHERE id = ?");
@@ -27,7 +24,6 @@ if (isset($_GET['delete']) && $role === 'admin') {
     exit;
 }
 
-// Proses update pengguna
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['update_user'])) {
     $userId = $_POST['user_id'];
     $newUsername = $_POST['username'];
@@ -41,7 +37,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['update_user'])) {
     exit;
 }
 
-// Proses upload foto profil
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES['profile_picture'])) {
     $userId = $_POST['user_id'];
     $file = $_FILES['profile_picture'];

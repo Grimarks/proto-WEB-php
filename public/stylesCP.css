@@ -1,0 +1,111 @@
+/* Change Password Page */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url("Foto/bg3.jpeg") no-repeat center center/cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.change-password-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.change-password-card {
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.change-password-card:hover {
+    transform: scale(1.02);
+}
+
+h2 {
+    color: white;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.message {
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.success-message {
+    color: green;
+    background: #e8f5e9;
+}
+
+.error-message {
+    color: red;
+    background: #ffebee;
+}
+
+label {
+    color: white;
+    display: block;
+    font-size: 14px;
+    margin-bottom: 8px;
+    text-align: left;
+    font-weight: 500;
+}
+
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input[type="password"]:focus {
+    border-color: #ff4757;
+}
+
+button {
+    background: #ff4757;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background: #e84118;
+    transform: scale(1.05);
+}
+
+.back-link {
+    display: block;
+    margin-top: 15px;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.back-link:hover {
+    color: #ff4757;
+    text-decoration: underline;
+}

@@ -1,0 +1,129 @@
+/* Reset Password Page */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url("Foto/bg4.jpeg") no-repeat center center/cover;
+    padding: 20px;
+    position: relative;
+}
+
+/* Overlay untuk meningkatkan keterbacaan */
+.form-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Gelap transparan */
+    z-index: 0;
+}
+
+.form-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.form-card:hover {
+    transform: scale(1.02);
+}
+
+h2 {
+    color: #00e1ff; /* Warna mencolok */
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.message {
+    font-weight: bold;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.success-message {
+    color: #28a745;
+    background: #d4edda;
+}
+
+.error-message {
+    color: #dc3545;
+    background: #f8d7da;
+}
+
+label {
+    color: #ffcc00; /* Warna kontras */
+    display: block;
+    font-size: 14px;
+    margin-bottom: 8px;
+    text-align: left;
+    font-weight: bold;
+}
+
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    transition: 0.3s;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+input[type="email"]::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+input[type="email"]:focus {
+    border: 1px solid #ff4081;
+    outline: none;
+    box-shadow: 0 0 8px rgba(255, 64, 129, 0.7);
+    background: rgba(255, 255, 255, 0.5);
+    color: black;
+}
+
+button {
+    background: #ff4081;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background: #e91e63;
+    transform: scale(1.05);
+}
+
+.back-link {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.back-link a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.back-link a:hover {
+    text-decoration: underline;
+    color: #ffb3d1;
+}
